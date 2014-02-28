@@ -12,7 +12,7 @@
 #' @return A square covariance matrix
 #' 
 #' @author François Pelletier
-gmmGAL.mu.vcov <- function(conditions.vector,n,...)
+covariance.GMM <- function(conditions.vector,n,...)
 {
 	t(conditions.vector(...)) %*% conditions.vector(...) / n
 }

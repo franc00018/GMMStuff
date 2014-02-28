@@ -1,8 +1,8 @@
-\name{gmmGAL.mu.vcov}
-\alias{gmmGAL.mu.vcov}
+\name{covariance.GMM}
+\alias{covariance.GMM}
 \title{Estimated covariance matrix}
 \usage{
-gmmGAL.mu.vcov(conditions.vector, n, ...)
+covariance.GMM(conditions.vector, n, ...)
 }
 \arguments{
   \item{conditions.vector}{Vector of moment conditions}
