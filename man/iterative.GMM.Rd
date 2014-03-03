@@ -1,8 +1,8 @@
-\name{optim.GMM}
-\alias{optim.GMM}
-\title{Optimization with constraints for GMM methos}
+\name{iterative.GMM}
+\alias{iterative.GMM}
 \usage{
-optim.GMM(start, conditions.vector, sample, ..., W, R, r)
+iterative.GMM(start, conditions.vector, sample, ..., W, R, r, max.iter = 50,
+  epsilon = 1e-06)
 }
 \arguments{
   \item{start}{Starting values for the parameters and
@@ -19,12 +19,14 @@ optim.GMM(start, conditions.vector, sample, ..., W, R, r)
   \item{R}{Linear constraint matrix of coefficients}
 
   \item{r}{Linear constraint constants}
+
+  \item{max.iter}{Maximum number of iterations}
+
+  \item{epsilon}{Minimum precision level}
 }
 \value{
-une liste contenant le résultat de l'optimisation
-}
-\description{
-Optimization with constraints for GMM methos
+A list containing the optimized vector of parameter and
+corresponding covariance matrix
 }
 \author{
 François Pelletier
