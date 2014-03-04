@@ -1,9 +1,12 @@
-# TODO: Add comment
+# Iterative GMM method
 # 
-# Author: francois
+# Author: Francois Pelletier
+#
+# LGPL-3.0
 ###############################################################################
 
-
+#' Iterative GMM method
+#' 
 #' @param start Starting values for the parameters and lagrangian
 #' @param conditions.vector Vector of moment conditions
 #' @param sample Individual data sample

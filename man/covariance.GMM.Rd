@@ -11,7 +11,7 @@ covariance.GMM(conditions.vector, param, sample...)
 
   \item{sample}{Individual data sample}
 
-  \item{...}{Parameters of the vector of moment conditions}
+  \item{...}{Functions of the vector of moment conditions}
 }
 \value{
 A square covariance matrix

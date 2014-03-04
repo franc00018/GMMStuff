@@ -1,5 +1,6 @@
 \name{iterative.GMM}
 \alias{iterative.GMM}
+\title{Iterative GMM method}
 \usage{
 iterative.GMM(start, conditions.vector, sample, ..., W, R, r, max.iter = 50,
   epsilon = 1e-06)
@@ -27,6 +28,9 @@ iterative.GMM(start, conditions.vector, sample, ..., W, R, r, max.iter = 50,
 \value{
 A list containing the optimized vector of parameter and
 corresponding covariance matrix
+}
+\description{
+Iterative GMM method
 }
 \author{
 François Pelletier
