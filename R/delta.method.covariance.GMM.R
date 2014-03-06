@@ -11,7 +11,7 @@
 #' @param gradient Gradient matrix of the moment conditions
 #' @param size Sample size
 #' @return The covariance matrix of the parameters
-#'
+#' @export delta.method.covariance.GMM
 #' @author François Pelletier
 delta.method.covariance.GMM <- function(covariance,gradient,size)
 {

@@ -13,7 +13,7 @@
 #' @param skewnessf Skewness function
 #' @param kurtosisf Kurtosis function
 #' @return A four column matrix of differences
-#' 
+#' @export fourmoments.gmm.vector
 #' @author François Pelletier
 fourmoments.gmm.vector <- function(param,sample,meanf,variancef,skewnessf,kurtosisf)
 {

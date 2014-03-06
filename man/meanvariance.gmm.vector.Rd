@@ -1,8 +1,8 @@
-\name{mean.variance.gmm.vector}
-\alias{mean.variance.gmm.vector}
+\name{meanvariance.gmm.vector}
+\alias{meanvariance.gmm.vector}
 \title{GMM vector for mean and variance moment conditions}
 \usage{
-\method{mean}{variance.gmm.vector}(param, sample, meanf, variancef)
+meanvariance.gmm.vector(param, sample, meanf, variancef)
 }
 \arguments{
   \item{param}{Estimated parameters}

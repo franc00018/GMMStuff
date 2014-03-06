@@ -17,7 +17,7 @@
 #' @param max.iter Maximum number of iterations
 #' @param epsilon Minimum precision level
 #' @return A list containing the optimized vector of parameter and corresponding covariance matrix
-#' 
+#' @export iterative.GMM
 #' @author François Pelletier
 iterative.GMM <- function(start,conditions.vector,sample,...,
 		W,R,r,max.iter=50,epsilon=1E-6)

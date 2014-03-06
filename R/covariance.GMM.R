@@ -11,7 +11,7 @@
 #' @param sample Individual data sample
 #' @param ... Functions of the vector of moment conditions
 #' @return A square covariance matrix
-#' 
+#' @export covariance.GMM
 #' @author François Pelletier
 covariance.GMM <- function(conditions.vector,param,sample...)
 {

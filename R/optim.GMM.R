@@ -8,7 +8,7 @@
 #' @param R Linear constraint matrix of coefficients
 #' @param r Linear constraint constants
 #' @return une liste contenant le résultat de l'optimisation
-#' 
+#' @export optim.GMM
 #' @author François Pelletier
 optim.GMM <- function(start,conditions.vector,sample,...,W,R,r)
 {

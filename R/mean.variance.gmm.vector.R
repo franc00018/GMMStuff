@@ -12,9 +12,9 @@
 #' @param meanf Mean function
 #' @param variancef Variance function
 #' @return A two column matrix of differences
-#' 
+#' @export meanvariance.gmm.vector
 #' @author François Pelletier
-mean.variance.gmm.vector <- function(param,sample,meanf,variancef)
+meanvariance.gmm.vector <- function(param,sample,meanf,variancef)
 {
 	cbind(X-meanf(param),(X-meanf(param))^2 - variancef(param))
 }

@@ -1,8 +1,7 @@
-export(covariance.GMM,
-delta.method.covariance.GMM,
-fourmoments.gmm.vector,
-iterative.GMM,
-mean.variance.gmm.vector,
-objective.GMM,
-optim.GMM
-)
+export(covariance.GMM)
+export(delta.method.covariance.GMM)
+export(fourmoments.gmm.vector)
+export(iterative.GMM)
+export(meanvariance.gmm.vector)
+export(objective.GMM)
+export(optim.GMM)
