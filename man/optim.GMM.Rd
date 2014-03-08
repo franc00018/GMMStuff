@@ -1,30 +1,25 @@
 \name{optim.GMM}
 \alias{optim.GMM}
-\title{Optimization with constraints for GMM methos}
+\title{Optimization for GMM method}
 \usage{
-optim.GMM(start, conditions.vector, sample, ..., W, R, r)
+optim.GMM(start, conditions.vector, data, W, ...)
 }
 \arguments{
-  \item{start}{Starting values for the parameters and
-  lagrangian}
+  \item{start}{Starting values for the parameters}
 
   \item{conditions.vector}{Vector of moment conditions}
 
-  \item{sample}{Individual data sample}
+  \item{data}{Individual data sample}
 
   \item{...}{Functions of the vector of moment conditions}
 
   \item{W}{Weighting matrix}
-
-  \item{R}{Linear constraint matrix of coefficients}
-
-  \item{r}{Linear constraint constants}
 }
 \value{
-une liste contenant le résultat de l'optimisation
+a list with optimization results
 }
 \description{
-Optimization with constraints for GMM methos
+Optimization for GMM method
 }
 \author{
 François Pelletier

@@ -9,7 +9,7 @@
 #' 
 #' @param start Starting values for the parameters and lagrangian
 #' @param conditions.vector Vector of moment conditions
-#' @param sample Individual data sample
+#' @param data Individual data sample
 #' @param ... Functions of the vector of moment conditions
 #' @param W Weighting matrix
 #' @param R Linear constraint matrix of coefficients
@@ -19,15 +19,15 @@
 #' @return A list containing the optimized vector of parameter and corresponding covariance matrix
 #' @export iterative.GMM
 #' @author François Pelletier
-iterative.GMM <- function(start,conditions.vector,sample,...,
-		W,R,r,max.iter=50,epsilon=1E-6)
+iterative.GMM <- function(start,conditions.vector,data,...,
+		W=diag(length(conditions.vector)),R=0,r=0,lagrangian.start=rep(0,length(conditions.vector)),max.iter=50,epsilon=1E-6)
 {
-	theta1 <- optim.GMM(start,conditions.vector,sample,...,W,R,r)
+	theta1 <- optim.GMM(start,conditions.vector,data,...,W,R,r,lagrangian.start)
 	i <- 1
 	repeat
 	{
-		theta2 <- optim.GMM(theta1,conditions.vector,sample,...,W,R,r)
-		S <- covariance.GMM(conditions.vector,param,sample,...)
+		theta2 <- optim.GMM(theta1,conditions.vector,data,...,W,R,r,lagrangian.start)
+		S <- covariance.GMM(conditions.vector,param,data,...)
 		if(sqrt(sum((theta1-theta2)^2))<epsilon)
 			return(list(par=theta2,cov=S))
 		else if (i>max.iter)

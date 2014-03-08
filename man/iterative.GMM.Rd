@@ -2,7 +2,9 @@
 \alias{iterative.GMM}
 \title{Iterative GMM method}
 \usage{
-iterative.GMM(start, conditions.vector, sample, ..., W, R, r, max.iter = 50,
+iterative.GMM(start, conditions.vector, data, ...,
+  W = diag(length(conditions.vector)), R = 0, r = 0,
+  lagrangian.start = rep(0, length(conditions.vector)), max.iter = 50,
   epsilon = 1e-06)
 }
 \arguments{
@@ -11,7 +13,7 @@ iterative.GMM(start, conditions.vector, sample, ..., W, R, r, max.iter = 50,
 
   \item{conditions.vector}{Vector of moment conditions}
 
-  \item{sample}{Individual data sample}
+  \item{data}{Individual data sample}
 
   \item{...}{Functions of the vector of moment conditions}
 
