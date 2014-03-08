@@ -8,13 +8,13 @@
 
 #' GMM vector for mean and variance moment conditions
 #' @param param Estimated parameters
-#' @param X Data Sample
+#' @param data Data Sample
 #' @param meanf Mean function
 #' @param variancef Variance function
 #' @return A two column matrix of differences
 #' @export meanvariance.gmm.vector
 #' @author François Pelletier
-meanvariance.gmm.vector <- function(param,X,meanf,variancef)
+meanvariance.gmm.vector <- function(param,data,meanf,variancef)
 {
-	cbind(X-meanf(param),(X-meanf(param))^2 - variancef(param))
+	cbind(data-meanf(param),(data-meanf(param))^2 - variancef(param))
 }

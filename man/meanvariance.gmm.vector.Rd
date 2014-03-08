@@ -2,12 +2,12 @@
 \alias{meanvariance.gmm.vector}
 \title{GMM vector for mean and variance moment conditions}
 \usage{
-meanvariance.gmm.vector(param, X, meanf, variancef)
+meanvariance.gmm.vector(param, data, meanf, variancef)
 }
 \arguments{
   \item{param}{Estimated parameters}
 
-  \item{X}{Data Sample}
+  \item{data}{Data Sample}
 
   \item{meanf}{Mean function}
 

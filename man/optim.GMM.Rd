@@ -11,9 +11,9 @@ optim.GMM(start, conditions.vector, data, W, ...)
 
   \item{data}{Individual data sample}
 
-  \item{...}{Functions of the vector of moment conditions}
-
   \item{W}{Weighting matrix}
+
+  \item{...}{Functions of the vector of moment conditions}
 }
 \value{
 a list with optimization results

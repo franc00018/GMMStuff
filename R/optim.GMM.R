@@ -10,8 +10,8 @@
 #' @param start Starting values for the parameters
 #' @param conditions.vector Vector of moment conditions
 #' @param data Individual data sample
-#' @param ... Functions of the vector of moment conditions
 #' @param W Weighting matrix
+#' @param ... Functions of the vector of moment conditions
 #' @return a list with optimization results
 #' @export optim.GMM
 #' @author François Pelletier

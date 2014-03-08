@@ -2,9 +2,7 @@
 \alias{iterative.GMM}
 \title{Iterative GMM method}
 \usage{
-iterative.GMM(start, conditions.vector, data, ...,
-  W = diag(length(conditions.vector)), R = 0, r = 0,
-  lagrangian.start = rep(0, length(conditions.vector)), max.iter = 50,
+iterative.GMM(start, conditions.vector, data, W, ..., max.iter = 50,
   epsilon = 1e-06)
 }
 \arguments{
@@ -15,13 +13,9 @@ iterative.GMM(start, conditions.vector, data, ...,
 
   \item{data}{Individual data sample}
 
-  \item{...}{Functions of the vector of moment conditions}
-
   \item{W}{Weighting matrix}
 
-  \item{R}{Linear constraint matrix of coefficients}
-
-  \item{r}{Linear constraint constants}
+  \item{...}{Functions of the vector of moment conditions}
 
   \item{max.iter}{Maximum number of iterations}
 

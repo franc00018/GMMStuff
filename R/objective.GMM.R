@@ -9,8 +9,8 @@
 #' @param param Vector of parameters
 #' @param conditions.vector Vector of moment conditions
 #' @param data Individual data sample
-#' @param ... Functions of the vector of moment conditions
 #' @param W Weighting matrix
+#' @param ... Functions of the vector of moment conditions
 #' @return A scalar value
 #' @export objective.GMM
 #' @author François Pelletier
