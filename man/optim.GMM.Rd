@@ -2,10 +2,10 @@
 \alias{optim.GMM}
 \title{Optimization for GMM method}
 \usage{
-optim.GMM(start, conditions.vector, data, W, ...)
+optim.GMM(start.value, conditions.vector, data, W, ...)
 }
 \arguments{
-  \item{start}{Starting values for the parameters}
+  \item{start.value}{Starting values for the parameters}
 
   \item{conditions.vector}{Vector of moment conditions}
 

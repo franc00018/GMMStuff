@@ -8,12 +8,12 @@
 #' Estimated covariance matrix
 #' @param conditions.vector Vector of moment conditions
 #' @param param Vector of estimated parameters
-#' @param sample Individual data sample
+#' @param data Individual data sample
 #' @param ... Functions of the vector of moment conditions
 #' @return A square covariance matrix
 #' @export covariance.GMM
 #' @author François Pelletier
-covariance.GMM <- function(conditions.vector,param,sample...)
+covariance.GMM <- function(conditions.vector,param,data,...)
 {
-	t(conditions.vector(param,sample,...)) %*% conditions.vector(param,sample,...) / length(sample)
+	t(conditions.vector(param,data,...)) %*% conditions.vector(param,data,...) / length(data)
 }

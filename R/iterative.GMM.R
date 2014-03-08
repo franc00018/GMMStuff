@@ -7,7 +7,7 @@
 
 #' Iterative GMM method
 #' 
-#' @param start Starting values for the parameters and lagrangian
+#' @param start.value Starting values for the parameters and lagrangian
 #' @param conditions.vector Vector of moment conditions
 #' @param data Individual data sample
 #' @param W Weighting matrix
@@ -17,14 +17,14 @@
 #' @return A list containing the optimized vector of parameter and corresponding covariance matrix
 #' @export iterative.GMM
 #' @author François Pelletier
-iterative.GMM <- function(start,conditions.vector,data,W,...,max.iter=50,epsilon=1E-6)
+iterative.GMM <- function(start.value,conditions.vector,data,W,...,max.iter=50,epsilon=1E-6)
 {
-	theta1 <- optim.GMM(start,conditions.vector,data,W,...)
+	theta1 <- optim.GMM(start.value,conditions.vector=conditions.vector,data=data,W=W,...)$par
 	i <- 1
 	repeat
 	{
-		theta2 <- optim.GMM(theta1,conditions.vector,data,W,...)
-		S <- covariance.GMM(conditions.vector,param,data,...)
+		theta2 <- optim.GMM(theta1,conditions.vector,data,W,...)$par
+		S <- covariance.GMM(conditions.vector,theta2,data,...)
 		if(sqrt(sum((theta1-theta2)^2))<epsilon)
 			return(list(par=theta2,cov=S))
 		else if (i>max.iter)

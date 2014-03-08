@@ -7,7 +7,7 @@
 
 #' Optimization for GMM method
 #'
-#' @param start Starting values for the parameters
+#' @param start.value Starting values for the parameters
 #' @param conditions.vector Vector of moment conditions
 #' @param data Individual data sample
 #' @param W Weighting matrix
@@ -15,7 +15,7 @@
 #' @return a list with optimization results
 #' @export optim.GMM
 #' @author François Pelletier
-optim.GMM <- function(start,conditions.vector,data,W,...)
+optim.GMM <- function(start.value,conditions.vector,data,W,...)
 {
-	optim(start,objective.GMM,conditions.vector,data,W,...)
+	optim(start.value,objective.GMM,gr=NULL,conditions.vector,data,W,...)
 }

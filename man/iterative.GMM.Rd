@@ -2,11 +2,11 @@
 \alias{iterative.GMM}
 \title{Iterative GMM method}
 \usage{
-iterative.GMM(start, conditions.vector, data, W, ..., max.iter = 50,
+iterative.GMM(start.value, conditions.vector, data, W, ..., max.iter = 50,
   epsilon = 1e-06)
 }
 \arguments{
-  \item{start}{Starting values for the parameters and
+  \item{start.value}{Starting values for the parameters and
   lagrangian}
 
   \item{conditions.vector}{Vector of moment conditions}

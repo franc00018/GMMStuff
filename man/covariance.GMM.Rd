@@ -2,14 +2,14 @@
 \alias{covariance.GMM}
 \title{Estimated covariance matrix}
 \usage{
-covariance.GMM(conditions.vector, param, sample...)
+covariance.GMM(conditions.vector, param, data, ...)
 }
 \arguments{
   \item{conditions.vector}{Vector of moment conditions}
 
   \item{param}{Vector of estimated parameters}
 
-  \item{sample}{Individual data sample}
+  \item{data}{Individual data sample}
 
   \item{...}{Functions of the vector of moment conditions}
 }
