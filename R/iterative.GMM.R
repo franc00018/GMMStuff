@@ -24,7 +24,7 @@ iterative.GMM <- function(start.value,conditions.vector,data,W,...,max.iter=50,e
 	repeat
 	{
 		theta2 <- optim.GMM(theta1,conditions.vector,data,W,...)$par
-		S <- covariance.GMM(conditions.vector,theta2,data,...)
+		S <- covariance.GMM(theta2,conditions.vector,data,...)
 		if(sqrt(sum((theta1-theta2)^2))<epsilon)
 			return(list(par=theta2,cov=S))
 		else if (i>max.iter)
